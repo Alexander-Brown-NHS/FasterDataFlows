@@ -1,0 +1,35 @@
+
+
+DatabaseInfo: # Add the information required to connect to your data warehouse
+  SourceServer: #<DB Server>
+  SourcePort: 1433
+  SourceDatabase: #<DB>
+  SourceSchema: #<DB Schema>
+  SourceUser: #<SqlUser> ## If using windows AD leave black and set 'UseWindowsAD' item below to True
+  SourcePassword: #<SqlPassword>  ## If using windows AD leave black and set 'UseWindowsAD' item below to True
+  SourceOdbcDriver: #ODBC Driver 17 for SQL Server ## Choose the appropriate driver to connect to the database.
+  UseWindowsAD: False
+
+FileStore:  # Add the locations you wish to store the files to (leave off the final '\')
+  csvDestination: #<\\PATH\TO\YOUR\SERVER>\FDF_Submission\FDF\Submissions  ## This is for the csv's that get created and then submitted.
+  apiResponseDestination: #<\\PATH\TO\YOUR\SERVER>\FDF_Submission\FDF\ApiResponses ## This is for the file copies of the API Response, these are also stored in the log file.
+  logFileDestination: #<\\PATH\TO\YOUR\SERVER>\FDF_Submission\FDF\Logs ## This is for the logs files.
+  
+ 
+
+API:
+  URL: "https://agemdscro.palantirfoundry.co.uk/secure-upload/api/blobs/csv?fileName="
+  Returns: # Store the different returns and their API tokens
+
+    outpatient_v1_0: 
+      SqlQuery: #<Database SQL Query To Select Data>
+      Token: #<Foundry Token>
+    current_inpatient_v1_0:
+      SqlQuery: #<Database SQL Query To Select Data>
+      Token: #<Foundry Token>
+    discharge_v1_0: 
+      SqlQuery: #<Database SQL Query To Select Data>
+      Token: #<Foundry Token>
+    admission_v1_0: 
+      SqlQuery: #<Database SQL Query To Select Data>
+      Token: #<Foundry Token>
