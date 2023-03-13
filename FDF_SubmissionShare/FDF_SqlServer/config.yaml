@@ -2,6 +2,14 @@
 #  Only use the below log in credentails to store logins etc for testing or non-sensitive databases.  #
 #  This also includes API keys!                                                                       #
 #  You can import these directly into the python script as part of the instantiation of the SQL class #
+#  however it would be better to alter the 'createSQLengine' to decode and send encrypted credentials #
+#  rather than set the decoded string as an object in the script as anyone could get the password by  # 
+#  modifying the py file on the server to printing the objects.                                       #
+#  Consider also using .env files to store the below and adding the extension to .gitignore if using  #
+#  version control.                                                                                   #
+#  It would also be reccommended to encrypt the env variables before storing them if possible.        #
+#  This may help:                                                                                     #
+#  https://stackoverflow.com/questions/2490334/simple-way-to-encode-a-string-according-to-a-password  #
 #  Guide on using .env files and enviornment variables in python:                                     #
 #  https://dev.to/biplov/handling-passwords-and-secret-keys-using-environment-variables-2ei0          #
 # =================================================================================================== #
