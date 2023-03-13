@@ -1,6 +1,12 @@
+# =================================================================================================== #
+#  Only use the below log in credentails to store logins etc for testing or non-sensitive databases.  #
+#  This also includes API keys!                                                                       #
+#  You can import these directly into the python script as part of the instantiation of the SQL class #
+#  Guide on using .env files and enviornment variables in python:                                     #
+#  https://dev.to/biplov/handling-passwords-and-secret-keys-using-environment-variables-2ei0          #
+# =================================================================================================== #
 
-
-DatabaseInfo: # Add the information required to connect to your data warehouse
+DatabaseInfo: #  Add the information required to connect to your data warehouse. DO NOT INCLUDE USER & PASSWORD, USE ENV VARIABLES OR KEY VAULTS.
   SourceServer: #<DB Server>
   SourcePort: 1433
   SourceDatabase: #<DB>
